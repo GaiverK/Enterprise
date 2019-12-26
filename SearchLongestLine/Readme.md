@@ -12,13 +12,13 @@ Gradle
 ### Решение
 Программа принимает путь к файлу через параметры командной строки
 
-Class LongestWordBenchmark
+Class LongestLineBenchmark
 
 Для тестирования организованы методы поиска:
  1. Через bufferedReader - ( более предпочтителен по результатам теста )
  2. Через Files.lines - с фильтрацией слов
 
 ### Результат беннчмарка JMH
-[JMH log](https://github.com/GaiverK/Enterprise/blob/master/SearchLongestWord/benchmarkResult.txt)
+ожидаем результатов тестирования
 
 
