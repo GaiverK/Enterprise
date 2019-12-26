@@ -1,7 +1,6 @@
 
 plugins {
     id 'java'
-    id "me.champeau.gradle.jmh" version "0.4.8"
 }
 
 group 'SearchLongestWord'
@@ -11,26 +10,16 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
-    maven {
-        url "https://plugins.gradle.org/m2/"
-    }
 }
 
-sourceSets {
-    jmh {
-        java.srcDirs = ['src/jmh2/java']
-        resources.srcDirs = ['src/jmh2/resources']
-        compileClasspath += sourceSets.main.runtimeClasspath
-    }
-}
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile 'org.openjdk.jmh:jmh-generator-annprocess:1.19'
+    compile group: 'org.openjdk.jmh', name: 'jmh-core', version: '1.12'
+    annotationProcessor group: 'org.openjdk.jmh', name: 'jmh-generator-annprocess', version: '1.12'
 
 }
 
-apply plugin: "me.champeau.gradle.jmh"
 
 
 
