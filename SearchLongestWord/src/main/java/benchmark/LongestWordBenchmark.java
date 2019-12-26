@@ -15,11 +15,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
 public class LongestWordBenchmark {
-//    @BenchmarkMode(Mode.All) // Test all modes
-//    @OutputTimeUnit(TimeUnit.MILLISECONDS) // Get res in miliseconds
-//    @Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
-//    @Measurement(iterations = 3, time = 55, timeUnit = TimeUnit.MILLISECONDS)
-//    @Fork(10)
 
     @State(Scope.Thread)
     public static class Config{
@@ -71,10 +66,10 @@ public class LongestWordBenchmark {
     }
 
     public static void main(String[] args) throws IOException, RunnerException {
-        // Set options through annotations - does not work, always default values
-        // org.openjdk.jmh.Main.main(args);
+        // Set options through annotations - разобрался как запускать и так
+//         org.openjdk.jmh.Main.main(args);
 
-        // Set options through OptionsBuilder - work perfectly
+        // Set options through OptionsBuilder - и так
         Options opt = new OptionsBuilder()
                 .include(LongestWordBenchmark.class.getSimpleName())
                 .mode(Mode.All)
