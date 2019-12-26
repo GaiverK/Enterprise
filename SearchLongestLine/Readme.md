@@ -19,6 +19,6 @@ Class LongestLineBenchmark
  2. Через Files.lines - с фильтрацией слов
 
 ### Результат беннчмарка JMH
-ожидаем результатов тестирования
+[benchmark result](https://github.com/GaiverK/Enterprise/blob/master/SearchLongestLine/benchmark.txt)
 
 
