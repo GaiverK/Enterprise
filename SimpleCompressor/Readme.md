@@ -12,5 +12,5 @@
 
 
 ##### Исправления
-DeflaterOutputStream - заменен на OutputStream - проанализированы преимущества
-OutputStream zs = strategy.compress(ous) - перенесен в try with resources, ушел лишний close
+1. DeflaterOutputStream - заменен на OutputStream - проанализированы преимущества
+2. OutputStream zs = strategy.compress(ous) - перенесен в try with resources, ушел лишний close
