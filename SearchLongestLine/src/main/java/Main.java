@@ -9,16 +9,17 @@ public class Main {
             if( lookForFile.exists() && lookForFile.canRead() && lookForFile.isFile() ){
                 String fileName = lookForFile.getAbsolutePath();
                 LongestLineSearcher lws = new LongestLineSearcher();
+                int longSize;
                 try {
-                    lws.bufferedReaderSearcher(fileName);
-                    System.out.println(lws.getLongestLine());
+                    longSize = lws.bufferedReaderSearcher(fileName);
+                    System.out.println(longSize);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 try {
-                    lws.fileLinesSearcher(fileName);
-                    System.out.println(lws.getLongestLine());
+                    longSize = lws.fileLinesSearcher(fileName);
+                    System.out.println(longSize);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

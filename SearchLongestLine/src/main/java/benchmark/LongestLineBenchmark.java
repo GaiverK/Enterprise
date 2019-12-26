@@ -25,10 +25,10 @@ public class LongestLineBenchmark {
 
     @Benchmark
     @BenchmarkMode(Mode.All)
-    @Warmup(iterations = 15, time = 1)
-    @Measurement(iterations = 15, time = 1)
+    @Warmup(iterations = 10, time = 1)
+    @Measurement(iterations = 10, time = 1)
     @OutputTimeUnit(TimeUnit.SECONDS)
-    @Fork(10)
+    @Fork(5)
     @Threads(1)
     @Timeout(time = 5, timeUnit = TimeUnit.MINUTES)
     public void searchLongestWordByBufferedReader(Blackhole blackhole, Config conf) throws IOException {
@@ -41,15 +41,15 @@ public class LongestLineBenchmark {
                 line = bFileReader.readLine();
             }
         }
-        blackhole.consume(conf.firstLongestLine);
+        blackhole.consume(conf.firstLongestLine.length());
     }
 
     @Benchmark
     @BenchmarkMode(Mode.All)
-    @Warmup(iterations = 15, time = 1)
-    @Measurement(iterations = 15, time = 1)
+    @Warmup(iterations = 10, time = 1)
+    @Measurement(iterations = 10, time = 1)
     @OutputTimeUnit(TimeUnit.SECONDS)
-    @Fork(10)
+    @Fork(5)
     @Threads(1)
     @Timeout(time = 5, timeUnit = TimeUnit.MINUTES)
     public void searchLongestWordByFilesWithFilter(Blackhole blackhole, Config conf) throws IOException {
@@ -58,7 +58,7 @@ public class LongestLineBenchmark {
                 .forEach(line -> {
                     conf.secondLongestLine = (line.length() > conf.secondLongestLine.length()) ? line : conf.secondLongestLine;
                 });
-        blackhole.consume(conf.secondLongestLine);
+        blackhole.consume(conf.secondLongestLine.length());
     }
 
     public static void main(String[] args) throws IOException, RunnerException {

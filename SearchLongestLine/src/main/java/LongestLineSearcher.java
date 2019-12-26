@@ -9,7 +9,7 @@ public class LongestLineSearcher {
         return longestLine;
     }
 
-    public void bufferedReaderSearcher(String fileName) throws IOException {
+    public int bufferedReaderSearcher(String fileName) throws IOException {
         try(BufferedReader bFileReader = new BufferedReader(new InputStreamReader(new FileInputStream(fileName)))) {
             String line = bFileReader.readLine();
             while (line != null){
@@ -19,13 +19,15 @@ public class LongestLineSearcher {
                 line = bFileReader.readLine();
             }
         }
+        return  longestLine.length();
     }
 
-    public void fileLinesSearcher(String fileName) throws IOException {
+    public int fileLinesSearcher(String fileName) throws IOException {
         Files.lines(Paths.get(fileName))
                 .filter(line -> line.length() > longestLine.length())
                 .forEach(line -> {
                     longestLine = line;
                 });
+        return  longestLine.length();
     }
 }
