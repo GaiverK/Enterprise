@@ -15,8 +15,8 @@ Gradle
 Class LongestLineBenchmark
 
 Для тестирования организованы методы поиска:
- 1. Через bufferedReader - ( более предпочтителен по результатам теста )
- 2. Через Files.lines - с фильтрацией слов
+ 1. Через bufferedReader
+ 2. Через Files.lines
 
 ### Результат беннчмарка JMH
 [benchmark result](https://github.com/GaiverK/Enterprise/blob/master/SearchLongestLine/benchmark.txt)
