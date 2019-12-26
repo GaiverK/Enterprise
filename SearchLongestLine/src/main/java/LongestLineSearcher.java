@@ -9,6 +9,10 @@ public class LongestLineSearcher {
         return longestLine;
     }
 
+    public void resetString(){
+        longestLine = "";
+    }
+
     public int bufferedReaderSearcher(String fileName) throws IOException {
         try(BufferedReader bFileReader = new BufferedReader(new InputStreamReader(new FileInputStream(fileName)))) {
             String line = bFileReader.readLine();
