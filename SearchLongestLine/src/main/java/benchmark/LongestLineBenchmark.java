@@ -17,7 +17,7 @@ public class LongestLineBenchmark {
 
     @State(Scope.Thread)
     public static class Config{
-        String fileName = "/test2.txt";
+        String fileName = "/book.txt";
         String firstLongestLine = "";
         String secondLongestLine = "";
     }
