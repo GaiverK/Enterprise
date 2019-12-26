@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 
 public class LongestWordBenchmark {
 //    @BenchmarkMode(Mode.All) // Test all modes
-//    @OutputTimeUnit(TimeUnit.MILLISECONDS) // Get res in seconds
+//    @OutputTimeUnit(TimeUnit.MILLISECONDS) // Get res in miliseconds
 //    @Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
 //    @Measurement(iterations = 3, time = 55, timeUnit = TimeUnit.MILLISECONDS)
 //    @Fork(10)
