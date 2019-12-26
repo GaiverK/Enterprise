@@ -1,1 +1,9 @@
-Скоро выложу
+"Benchmark","Mode","Threads","Samples","Score","Score Error (99,9%)","Unit"
+"benchmark.LongestLineBenchmark.searchLongestWordByBufferedReader","thrpt",1,50,"621,736582","3,399897","ops/s"
+"benchmark.LongestLineBenchmark.searchLongestWordByFilesWithFilter","thrpt",1,50,"611,457982","2,477823","ops/s"
+"benchmark.LongestLineBenchmark.searchLongestWordByBufferedReader","avgt",1,50,"0,001696","0,000069","s/op"
+"benchmark.LongestLineBenchmark.searchLongestWordByFilesWithFilter","avgt",1,50,"0,001655","0,000029","s/op"
+"benchmark.LongestLineBenchmark.searchLongestWordByBufferedReader","sample",1,30689,"0,001627","0,000003","s/op"
+"benchmark.LongestLineBenchmark.searchLongestWordByFilesWithFilter","sample",1,30429,"0,001642","0,000003","s/op"
+"benchmark.LongestLineBenchmark.searchLongestWordByBufferedReader","ss",1,50,"0,002101","0,000035","s/op"
+"benchmark.LongestLineBenchmark.searchLongestWordByFilesWithFilter","ss",1,50,"0,002385","0,000107","s/op"
