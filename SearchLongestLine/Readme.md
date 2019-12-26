@@ -16,7 +16,7 @@ Class LongestLineBenchmark
 
 Для тестирования организованы методы поиска:
  1. Через bufferedReader
- 2. Через Files.lines
+ 2. Через Files.lines - немного быстрее по результатам
 
 ### Результат беннчмарка JMH
 [benchmark result](https://github.com/GaiverK/Enterprise/blob/master/SearchLongestLine/benchmark.txt)
