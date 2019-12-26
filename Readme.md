@@ -10,3 +10,4 @@
 #### ДЗ 2 
 
 1. [SearchLongestWord](https://github.com/GaiverK/Enterprise/tree/master/SearchLongestWord)
+2. [SearchLongestLine](https://github.com/GaiverK/Enterprise/tree/master/SearchLongestLine)
