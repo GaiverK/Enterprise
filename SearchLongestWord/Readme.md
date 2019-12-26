@@ -26,7 +26,7 @@ Class LongestWordBenchmark
 1. @BenchmarkMode(Mode.All) // Test all modes
 2. @OutputTimeUnit(TimeUnit.MILLISECONDS) // Get res in miliseconds
 3. @Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
-+ запуск org.openjdk.jmh.Main.main(args);
+запускал через org.openjdk.jmh.Main.main(args);
 
 Через Options.Builder - работает отлично.
 
