@@ -1,0 +1,27 @@
+
+plugins {
+    id 'java'
+}
+
+group 'SearchLongestWord'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.openjdk.jmh', name: 'jmh-core', version: '1.12'
+    annotationProcessor group: 'org.openjdk.jmh', name: 'jmh-generator-annprocess', version: '1.12'
+
+}
+
+
+
+
+
+
