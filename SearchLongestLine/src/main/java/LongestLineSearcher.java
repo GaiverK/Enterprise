@@ -11,9 +11,7 @@ public class LongestLineSearcher {
         try(BufferedReader bFileReader = new BufferedReader(new InputStreamReader(new FileInputStream(fileName)))) {
             String line = bFileReader.readLine();
             while (line != null){
-                if( line.length() > longestLineLength ){
-                    longestLineLength = line.length();
-                }
+                longestLineLength = Math.max(line.length(), longestLineLength);
                 line = bFileReader.readLine();
             }
         }

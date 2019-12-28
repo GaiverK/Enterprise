@@ -36,9 +36,7 @@ public class LongestLineBenchmark {
         try(BufferedReader bFileReader = new BufferedReader(new InputStreamReader(new FileInputStream(conf.fileName), Charset.defaultCharset()))) {
             String line = bFileReader.readLine();
             while (line != null){
-                if( line.length() > conf.longestLineLength ){
-                    conf.longestLineLength = line.length();
-                }
+                conf.longestLineLength = Math.max(line.length(), conf.longestLineLength);
                 line = bFileReader.readLine();
             }
         }
