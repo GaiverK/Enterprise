@@ -19,6 +19,7 @@ Class LongestLineBenchmark
  2. Через Files.lines - немного быстрее по результатам
 
 ### Результат беннчмарка JMH
-[benchmark result](https://github.com/GaiverK/Enterprise/blob/master/SearchLongestLine/benchmark.txt)
+[benchmark result old](https://github.com/GaiverK/Enterprise/blob/master/SearchLongestLine/benchmark_old.txt)
+[benchmark result new](https://github.com/GaiverK/Enterprise/blob/master/SearchLongestLine/benchmark.txt)
 
 
