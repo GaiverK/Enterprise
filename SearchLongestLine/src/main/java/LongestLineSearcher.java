@@ -1,37 +1,29 @@
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Comparator;
+import java.util.Optional;
 
 public class LongestLineSearcher {
-    private String longestLine = "";
-
-    public String getLongestLine() {
-        return longestLine;
-    }
-
-    public void resetString(){
-        longestLine = "";
-    }
+    private int longestLineLength = 0;
 
     public int bufferedReaderSearcher(String fileName) throws IOException {
         try(BufferedReader bFileReader = new BufferedReader(new InputStreamReader(new FileInputStream(fileName)))) {
             String line = bFileReader.readLine();
             while (line != null){
-                if( line.length() > longestLine.length() ){
-                    longestLine = line;
+                if( line.length() > longestLineLength ){
+                    longestLineLength = line.length();
                 }
                 line = bFileReader.readLine();
             }
         }
-        return  longestLine.length();
+        return  longestLineLength;
     }
 
     public int fileLinesSearcher(String fileName) throws IOException {
-        Files.lines(Paths.get(fileName))
-                .filter(line -> line.length() > longestLine.length())
-                .forEach(line -> {
-                    longestLine = line;
-                });
-        return  longestLine.length();
+        Optional<String> longestWord = Files.lines(Paths.get(fileName))
+                .max(Comparator.comparingInt(String::length));
+
+        return longestWord.map(String::length).orElse(0);
     }
 }

@@ -18,7 +18,6 @@ public class Main {
                 }
 
                 try {
-                    lws.resetString();
                     longSize = lws.fileLinesSearcher(fileName);
                     System.out.println(longSize);
                 } catch (IOException e) {
